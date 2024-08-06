@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TigerX6's GitHub Pages site">
+    <meta name="author" content="TigerX6">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TigerX6</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background: url('assets/background.png') no-repeat;
+        background-size: cover;
+        height: 100vh;
+        margin: 0%;
+        font-family: 'Inter', sans-serif;
+        font-size: 19px;
+        font-weight: 270;
+    }
+    .avatar {
+        background-position: center;
+        width: 200px;
+        top: 50%;
+        left: 50%;
+        padding: 7px;
+    }
+    .copyright-text {
+        position: fixed;
+        bottom: 1px;
+        right: 3px;
+        font-size: 16px;
+        color: white;
+        font-weight: 380;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-row {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 15px; /* Space between each text-button pair */
+        justify-content: center;
+    }
+    .button {
+        background: #27292f;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 11px;
+        transition: 0.2s ease all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button img {
+        margin-right: 5px;
+    }
+    .button-discord {
+        background: #5969ea;
+        max-width: 60%;
+        margin: auto auto;
+    }
+    .button:hover {
+        background-color: #1d2023;
+    }
+    .button-discord:hover {
+        background: #4855bd;
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .content {
+        max-width: 500px;
+        margin: auto;
+        background: #ffffffc3;
+        padding: 20px;
+        border-radius: 2%;
+    }
+    .rounded {
+        border-radius: 12%;
+    }
+    .small-text {
+        font-size: 18px;
+        font-weight: 520;
+    }
+    .text-centered {
+        text-align: center;
+    }
+    
+</style>
+
+<body>
+    <main class="centered">
+        <div class="content text-centered">
+            <img class="avatar rounded" src="assets/avatar.png" alt="avatar"/>
+            <h3><strong>Hi, I'm TigerX6.</strong><br></h3>
+            <p>I'm a Minecraft plugin developer, mainly using Kotlin.</p>
+            <p class="small-text">Check out my plugins:</p>
+            <div class="container-row">
+                <a class="button" target="_blank" href="https://modrinth.com/user/TigerX6"><img src="https://docs.modrinth.com/img/logo.svg" alt="modrinth logo" width="24"><div class="small-text">Modrinth</div></a>
+                <a class="button" target="_blank" href="https://hangar.papermc.io/TigerX6"><img src="https://hangar.papermc.io/_nuxt/hangar-logo.DNKyJEtq.svg" alt="Paper Hangar Logo" width="24"><div class="small-text">Paper Hangar</div></a>
+            </div>
+            <p class="small-text">Contact me:</p>
+            <a class="button button-discord" target="_blank" href="https://discord.com/users/926167530651914303"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6257d23c5fb25be7e0b6e220_Open%20Source%20Projects%20_%20Discord-7.svg" alt="Discord" width="120"></a>
+        </div>
+    </main>
+    <div class="copyright-text">© <span id="year"></span> TigerX6</div>
+</body>
+
+<script type="text/javascript">
+    function updateTime() {
+        document.getElementById("year").textContent = new Date().getFullYear();
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+</html>
