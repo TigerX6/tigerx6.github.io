@@ -107,10 +107,10 @@
         margin: auto auto;
     }
     .button:hover {
-        background-color: #1d2023;
+        background-color: #151a1a;
     }
     .button-github:hover {
-        background: #f0f1f4;
+        background: #ebebeb;
     }
     .button-discord:hover {
         background: #4855bd;
@@ -146,21 +146,21 @@
     <main class="centered">
         <div class="content text-centered" id="content">
             <img class="avatar rounded" src="assets/avatar.png" alt="avatar"/>
-            <h3><strong>Hi, I'm TigerX6!</strong><br><div style="font-size: 16px; font-weight: 500;">(sometimes also TigerX4, e.g. on Discord & Modrinth)</div></h3>
+            <h3><strong>Hi, I'm TigerX6!</strong><br><div style="font-size: 16px; font-weight: 500;">(also known as TigerX4 on Discord)</div></h3>
             <p>I'm a Minecraft plugin developer, mainly using Kotlin.</p>
             <p class="small-text">Check out my plugins:</p>
             <div class="container-row">
-                <a class="button" target="_blank" href="https://modrinth.com/user/TigerX6"><img src="https://docs.modrinth.com/img/logo.svg" alt="modrinth logo" width="25">modrinth</a>
+                <a class="button" target="_blank" href="https://modrinth.com/user/TigerX6"><img src="https://cdn.modrinth.com/modrinth-new.png" alt="modrinth logo" width="29">modrinth</a>
                 <a class="button" target="_blank" href="https://hangar.papermc.io/TigerX6"><img src="https://hangar.papermc.io/_nuxt/hangar-logo.DNKyJEtq.svg" alt="Paper Hangar Logo" width="29">Paper Hangar</a>
             </div>
-            <p class="small-text">GitHub:</p>
+            <p class="small-text">My GitHub:</p>
             <a class="button button-github" target="_blank" href="https://github.com/TigerX6"><img src="https://pngimg.com/uploads/github/github_PNG23.png" alt="GitHub" width="120"></a>
             <p class="small-text">Contact me:</p>
             <a class="button button-discord" target="_blank" href="https://discord.com/users/926167530651914303"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6257d23c5fb25be7e0b6e220_Open%20Source%20Projects%20_%20Discord-7.svg" alt="Discord" width="120"></a>
 
         </div>
     </main>
-    <div class="copyright-text">© <span id="year"></span> TigerX6</div>
+    <div class="copyright-text">© 2024 - <span id="year"></span> TigerX6</div>
    <button onclick="changeAppearance()" class="appearance-button material-symbols-outlined"><span id="appearance-icon">dark_mode</span></button>
 </body>
 
@@ -176,11 +176,11 @@
     const hours = now.getHours();
     if (hours > 18 || hours < 5) {
         page.style.backgroundImage = "url(assets/background_night.png)";
-        appearanceIcon.textContent = iconText = "light_mode"
+        appearanceIcon.textContent = iconText = "dark_mode"
         content.style.backgroundColor = contentColorDark
     } else {
         page.style.backgroundImage = "url(assets/background.png)";
-        appearanceIcon.textContent = iconText = "dark_mode"
+        appearanceIcon.textContent = iconText = "light_mode"
         content.style.backgroundColor = contentColorLight
     }
 
@@ -189,8 +189,8 @@
     }
     function changeAppearance() {
         appearanceIcon.textContent = iconText = iconText == "dark_mode" ? "light_mode" : "dark_mode";
-        page.style.backgroundImage = iconText == "light_mode" ? "url(assets/background_night.png)" : "url(assets/background.png)";
-        content.style.backgroundColor = iconText == "light_mode" ? contentColorDark : contentColorLight;
+        page.style.backgroundImage = iconText == "dark_mode" ? "url(assets/background_night.png)" : "url(assets/background.png)";
+        content.style.backgroundColor = iconText == "dark_mode" ? contentColorDark : contentColorLight;
     }
     
     updateTime();
